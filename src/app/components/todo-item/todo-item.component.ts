@@ -7,8 +7,7 @@ import { Todo } from 'src/app/_models/Todo';
   styleUrls: ['./todo-item.component.css']
 })
 export class TodoItemComponent implements OnInit {
-  // declare with todo type? make class?
-  @Input() todo: Todo = {};
+  @Input() todo: Todo = new Todo;
 
   constructor() { }
 
