@@ -2,10 +2,11 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 .description {
-  font-size: smaller;
+  font-size: x-small;
   font-style: italic;
 }
 
 .card-title {
   font-weight: bold;
+  margin: 0;
 }
