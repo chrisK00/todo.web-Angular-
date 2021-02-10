@@ -11,6 +11,7 @@ export class TodoItemComponent implements OnInit {
   faCheck = faCheck;
   @Input() todo: Todo = new Todo;
   @Output() deleteTodo: EventEmitter<Todo> = new EventEmitter();
+  @Output() toggleTodoCompleted: EventEmitter<Todo> = new EventEmitter();
   //Should be output here to delete todo
   constructor() { }
 
@@ -19,8 +20,10 @@ export class TodoItemComponent implements OnInit {
 
   toggleCompleted() {
     this.todo.completed = !this.todo.completed;
+    this.toggleTodoCompleted.emit();
     //need to change on api aswell
   }
+
 
   delete() {
     this.deleteTodo.emit();

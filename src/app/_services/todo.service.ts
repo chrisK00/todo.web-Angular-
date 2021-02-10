@@ -8,11 +8,24 @@ import { Todo } from '../_models/Todo';
   providedIn: 'root'
 })
 export class TodoService {
+
   todosUrl = environment.apiUrl + 'todo';
+  private todoList: Observable<Todo[]> = this.http.get<Todo[]>(this.todosUrl);
   constructor(private http: HttpClient) { }
 
   getTodos(): Observable<Todo[]> {
-    return this.http.get<Todo[]>(this.todosUrl);
+    return this.todoList;
   }
+
+  addTodo(todo: Todo) {
+    //should call api post
+    console.log('calling api');
+    this.http.post(this.todosUrl, todo).subscribe();
+  }
+
+  updateTodo(todo: Todo) {
+    // this.http.put(this.todosUrl, todo).subscribe(); need headers?
+  }
+
 }
 

@@ -1,3 +1,4 @@
 <ul class="list-group mx-auto mt-3 col-5">
-    <app-todo-item *ngFor="let item of todos" [todo]="item" (deleteTodo)="deleteTodo($event)"></app-todo-item>
+    <app-todo-item *ngFor="let item of todos" [todo]="item" (toggleTodoCompleted)="updateTodo($event)"
+        (deleteTodo)="deleteTodo($event)"></app-todo-item>
 </ul>

@@ -21,6 +21,10 @@ export class TodoListComponent implements OnInit {
     console.log("Deleted: " + deleteDodo.id);
   }
 
+  updateTodo(updateTodo: Todo) {
+    this.todoService.updateTodo(updateTodo);
+  }
+
   addTodo(addTodo: Todo) {
     //Todo
     //Call api

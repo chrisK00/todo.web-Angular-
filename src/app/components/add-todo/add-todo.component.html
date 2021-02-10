@@ -1,7 +1,7 @@
 <div class="mt-3">
     <form style="text-align: center;" (ngSubmit)="submit()">
-        <input type="text" placeholder="Title" name="title">
-        <input type="text" placeholder="Description" name="description">
-        <button type="submit" class="btn btn-success">Add</button>
+        <input type="text" [(ngModel)]="todo.title" placeholder="Title" name="title">
+        <input type="text" [(ngModel)]="todo.description" placeholder="Description" name="description">
+        <button type="submit" *ngIf="todo.title.length > 0" class="btn btn-success">Add</button>
     </form>
 </div>
