@@ -8,7 +8,7 @@ import { Todo } from 'src/app/_models/Todo';
 })
 export class TodoItemComponent implements OnInit {
   @Input() todo: Todo = new Todo;
-
+  //Should be output here to delete todo
   constructor() { }
 
   ngOnInit(): void {
