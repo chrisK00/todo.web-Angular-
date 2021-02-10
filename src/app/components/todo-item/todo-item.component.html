@@ -1,13 +1,15 @@
 <li class="list-group-item text-dark bg-light mb-1 border-0 overflow-hidden">
     <div class="row">
 
-        <div class="col">
+        <div [class.completed]="todo.completed" class="col">
             <div class="card-title">{{todo.title}}</div>
             <div class="description">{{todo.description}} </div>
         </div>
 
         <div class="btn-group h-100 col">
-            <button class=" btn-success ml-1">Done</button>
+            <button (click)="toggleCompleted()" class=" btn-success ml-1">
+                <fa-icon [icon]="faCheck"></fa-icon>
+            </button>
             <button class="btn-danger ml-1">X</button>
         </div>
 
