@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Todo } from 'src/app/_models/Todo';
 import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck';
 
@@ -10,6 +10,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck';
 export class TodoItemComponent implements OnInit {
   faCheck = faCheck;
   @Input() todo: Todo = new Todo;
+  @Output() deleteTodo: EventEmitter<Todo> = new EventEmitter();
   //Should be output here to delete todo
   constructor() { }
 
@@ -19,5 +20,9 @@ export class TodoItemComponent implements OnInit {
   toggleCompleted() {
     this.todo.completed = !this.todo.completed;
     //need to change on api aswell
+  }
+
+  delete() {
+    this.deleteTodo.emit();
   }
 }

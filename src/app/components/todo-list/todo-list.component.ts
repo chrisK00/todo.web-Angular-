@@ -15,4 +15,15 @@ export class TodoListComponent implements OnInit {
     this.todoService.getTodos().subscribe(todos => this.todos = todos);
   }
 
+  deleteTodo(deleteDodo: Todo) {
+    //Todo
+    //Call api
+    console.log("Deleted: " + deleteDodo.id);
+  }
+
+  addTodo(addTodo: Todo) {
+    //Todo
+    //Call api
+    this.todos.push(addTodo)
+  }
 }

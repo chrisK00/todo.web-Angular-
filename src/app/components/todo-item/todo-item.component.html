@@ -1,4 +1,4 @@
-<li class="list-group-item text-dark bg-light mb-1 border-0 overflow-hidden">
+<li class="list-group-item text-dark bg-light mb-1 border-0 overflow-hidden rounded">
     <div class="row">
 
         <div [class.completed]="todo.completed" class="col">
@@ -10,7 +10,7 @@
             <button (click)="toggleCompleted()" class=" btn-success ml-1">
                 <fa-icon [icon]="faCheck"></fa-icon>
             </button>
-            <button class="btn-danger ml-1">X</button>
+            <button (click)="delete()" class="btn-danger ml-1">X</button>
         </div>
 
     </div>

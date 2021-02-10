@@ -1,3 +1,7 @@
 <div class="mt-3">
-    <p style="text-align: center; color: white;">Add Todo ngform</p>
+    <form style="text-align: center;" (ngSubmit)="submit()">
+        <input type="text" placeholder="Title" name="title">
+        <input type="text" placeholder="Description" name="description">
+        <button type="submit" class="btn btn-success">Add</button>
+    </form>
 </div>
