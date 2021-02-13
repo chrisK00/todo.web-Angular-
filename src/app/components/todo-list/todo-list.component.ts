@@ -16,18 +16,11 @@ export class TodoListComponent implements OnInit {
   }
 
   deleteTodo(deleteDodo: Todo) {
-    //Todo
-    //Call api
-    console.log("Deleted: " + deleteDodo.id);
+    this.todoService.deleteTodo(deleteDodo);
+    this.todos = this.todos.filter(t => t.id != deleteDodo.id);
   }
 
   updateTodo(updateTodo: Todo) {
     this.todoService.updateTodo(updateTodo);
-  }
-
-  addTodo(addTodo: Todo) {
-    //Todo
-    //Call api
-    this.todos.push(addTodo)
   }
 }

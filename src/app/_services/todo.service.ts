@@ -18,14 +18,15 @@ export class TodoService {
   }
 
   addTodo(todo: Todo) {
-    //should call api post
-    console.log('calling api');
     this.http.post(this.todosUrl, todo).subscribe();
   }
 
   updateTodo(todo: Todo) {
-    // this.http.put(this.todosUrl, todo).subscribe(); need headers?
+    this.http.put(this.todosUrl, todo).subscribe();
   }
 
+  deleteTodo(todo: Todo) {
+    this.http.delete(this.todosUrl + '/' + todo.id).subscribe();
+  }
 }
 

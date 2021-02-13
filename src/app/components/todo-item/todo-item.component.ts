@@ -20,12 +20,11 @@ export class TodoItemComponent implements OnInit {
 
   toggleCompleted() {
     this.todo.completed = !this.todo.completed;
-    this.toggleTodoCompleted.emit();
-    //need to change on api aswell
+    this.toggleTodoCompleted.emit(this.todo);
   }
 
 
   delete() {
-    this.deleteTodo.emit();
+    this.deleteTodo.emit(this.todo);
   }
 }

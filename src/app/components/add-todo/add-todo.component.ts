@@ -16,7 +16,6 @@ export class AddTodoComponent implements OnInit {
   }
 
   submit() {
-    console.log('submitted');
     this.todoService.addTodo(this.todo);
   }
 }
