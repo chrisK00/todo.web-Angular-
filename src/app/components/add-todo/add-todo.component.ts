@@ -1,4 +1,6 @@
+
 import { Component, OnInit } from '@angular/core';
+
 import { Todo } from 'src/app/_models/Todo';
 import { TodoService } from 'src/app/_services/todo.service';
 
@@ -10,6 +12,7 @@ import { TodoService } from 'src/app/_services/todo.service';
 })
 export class AddTodoComponent implements OnInit {
   todo: Todo = new Todo;
+  form: any;
   constructor(private todoService: TodoService) { }
 
   ngOnInit(): void {
