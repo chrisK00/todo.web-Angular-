@@ -1,4 +1,7 @@
 # TodoWEB
+# How to consume:
+1. Run the todo.API
+2. run ng serve --open
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.0.
 
