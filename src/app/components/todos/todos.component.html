@@ -1,0 +1,5 @@
+<app-add-todo (addTodo)="addTodo($event)"></app-add-todo>
+<ul class="list-group mx-auto mt-3 col-5">
+    <app-todo-item *ngFor="let item of todos" [todo]="item" (toggleTodoCompleted)="toggleTodoCompleted($event)"
+        (deleteTodo)="deleteTodo($event)"></app-todo-item>
+</ul>
